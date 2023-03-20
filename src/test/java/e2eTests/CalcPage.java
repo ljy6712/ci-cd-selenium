@@ -1,5 +1,6 @@
 package e2eTests;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -55,7 +56,7 @@ public class CalcPage {
     private void getWebDriver(String serverUrl) {
         //System.setProperty("webdriver.chrome.driver", "/usr/local/bin/chromedriver");
         System.setProperty("webdriver.chrome.driver", "C:\\Users\\gram\\IdeaProjects\\ci-cd-selenium\\chromedriver_win32\\chromedriver.exe");
-//            WebDriverManager.chromedriver().setup();
+        WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
 //        options.addArguments("--headless");
         options.addArguments("--disable-notifications");

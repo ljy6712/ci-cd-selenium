@@ -1,5 +1,6 @@
 package e2eTests;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -25,7 +26,7 @@ public class DemoE2ETest {
         @BeforeEach
         public void setUp() {
             System.setProperty("webdriver.chrome.driver", "C:\\Users\\gram\\IdeaProjects\\ci-cd-selenium\\chromedriver_win32\\chromedriver.exe");
-//          WebDriverManager.chromedriver().setup();
+            WebDriverManager.chromedriver().setup();
             ChromeOptions options = new ChromeOptions();
 //            options.addArguments("--headless");
             options.addArguments("--disable-notifications");
